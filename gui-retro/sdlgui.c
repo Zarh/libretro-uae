@@ -27,6 +27,10 @@ typedef struct{
 #include "dialog.h"
 #include "sdlgui.h"
 
+#ifdef __CELLOS_LV2__
+#include "libretro.h"
+#endif
+
 extern int retroh,retrow;
 #define SDL_Delay GetTicks2
 #define TEXTURE_WIDTH retrow

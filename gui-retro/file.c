@@ -36,6 +36,10 @@ const char File_fileid[] = "Hatari file.c : " __DATE__ " " __TIME__;
 #define ftello ftell
 #endif
 
+#ifdef __CELLOS_LV2__
+#include "libretro.h"
+#endif
+
 /*-----------------------------------------------------------------------*/
 /**
  * Remove any '/'s from end of filenames, but keeps / intact

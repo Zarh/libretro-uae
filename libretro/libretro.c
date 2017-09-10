@@ -62,6 +62,13 @@ static struct retro_input_descriptor input_descriptors[] = {
    { 255, 255, 255, 255, NULL }
 };
 
+#ifdef __CELLOS_LV2__
+int FAKEaccess(char *fpath, int unused)
+{
+	struct stat buffer;   
+	return stat(fpath, &buffer); 
+}
+#endif
 
 void retro_set_environment(retro_environment_t cb)
 {

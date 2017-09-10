@@ -10,6 +10,17 @@
 
 #include <sys/time.h>
 
+#ifdef __CELLOS_LV2__
+// I didn't found any the __END_DECLS ...
+#include <sys/cdefs.h>
+#ifndef __BEGIN_DECLS
+#define __BEGIN_DECLS CDECL_BEGIN
+#endif
+#ifndef __END_DECLS
+#define __END_DECLS CDECL_END
+#endif
+#endif
+
 __BEGIN_DECLS
 
 struct timeb {
@@ -161,12 +172,6 @@ bool my_utime (const TCHAR *name, struct mytimeval *tv)
 
         return false;
 }
-
-#if defined(__CELLOS_LV2__) 
-#include <unistd.h> //stat() is defined here
-#define S_ISDIR(x) (x & CELL_FS_S_IFDIR)
-#define F_OK 0
-#endif
 
 int my_existsfile (const char *name)
 {

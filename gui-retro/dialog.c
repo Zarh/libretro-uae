@@ -19,7 +19,10 @@ const char Dialog_fileid[] = "Hatari dialog.c : " __DATE__ " " __TIME__;
 #include "sysdeps.h"
 #include "uae.h"
 #include "options.h"
+
+#ifndef __CELLOS_LV2__
 #include "memory.h"
+#endif
 
 int MUSTRESET=0;
 int MUSTRESET_CFG=0;

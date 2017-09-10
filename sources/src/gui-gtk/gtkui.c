@@ -227,12 +227,12 @@ extern void clearallkeys (void);
 
 
 
-static void uae_pause (void)
+void uae_pause (void)
 {
 	write_comm_pipe_int (&from_gui_pipe, GUICMD_PAUSE , 1);
 }
 
-static void uae_resume (void)
+void uae_resume (void)
 {
 	write_comm_pipe_int (&to_gui_pipe, GUICMD_UNPAUSE, 1);
 }

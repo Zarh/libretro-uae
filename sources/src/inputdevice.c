@@ -63,7 +63,7 @@ extern void master_sound_volume (int);
 extern void sound_mute (int);
 extern void sound_volume (int dir);
 extern uae_u32 uaerand (void);
-
+extern TCHAR *my_strdup_trim (const TCHAR *s);
 
 // 01 = host events
 // 02 = joystick

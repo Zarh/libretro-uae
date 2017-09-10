@@ -88,6 +88,8 @@ else ifeq ($(platform), wiiu)
    PLATFLAGS +=  -DRETRO -DALIGN_DWORD
 	STATIC_LINKING=1
 STATIC_LINKING_LINK=1
+
+# PS3
 else ifeq ($(platform), ps3)
    TARGET := $(TARGET_NAME)_libretro_$(platform).a
    CC = $(CELL_SDK)/host-win32/ppu/bin/ppu-lv2-gcc.exe
@@ -97,7 +99,9 @@ else ifeq ($(platform), ps3)
    CFLAGS += -DSDL_BYTEORDER=SDL_BIG_ENDIAN -DMSB_FIRST -DBYTE_ORDER=BIG_ENDIAN  -DBYTE_ORDER=BIG_ENDIAN \
 	-D__CELLOS_LV2__ -DHAVE_MEMALIGN -DHAVE_ASPRINTF -I$(ZLIB_DIR)
    PLATFLAGS +=  -DRETRO -DALIGN_DWORD
-	STATIC_LINKING=1
+   STATIC_LINKING=1
+   STATIC_LINKING_LINK=1
+   
 else ifeq ($(platform), emscripten)
    TARGET := $(TARGET_NAME)_libretro_$(platform).bc
    PLATFLAGS +=  -DRETRO -DALIGN_DWORD

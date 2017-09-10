@@ -51,7 +51,9 @@ static SGOBJ romdlg[] =
 };
 
 #ifdef LIBRETRO_PUAE
+#ifndef FILENAME_MAX
 #define FILENAME_MAX 512
+#endif
 #endif
 char szTosImageFileName[FILENAME_MAX];
 bool bPatchTos;

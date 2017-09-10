@@ -7,6 +7,10 @@
 #include <assert.h>
 #include <string.h>
 
+#ifdef __CELLOS_LV2__
+#include "libretro.h"
+#endif
+
 extern unsigned short int bmp[1024*1024];
 extern unsigned short int savebmp[1024*1024];
 

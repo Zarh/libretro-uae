@@ -22,6 +22,8 @@ extern int paula_sndbufsize;
 
 extern int soundcheck;
 
+void restart_sound_buffer (void);
+
 static __inline__ void check_sound_buffers (void)
 {
     unsigned int size = (char *)sndbufpt - (char *)sndbuffer;

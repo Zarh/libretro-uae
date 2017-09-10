@@ -24,6 +24,10 @@ const char DlgFileSelect_fileid[] = "Hatari dlgFileSelect.c : " __DATE__ " " __T
 #include "dialog.h"
 #include "libretro-mapper.h"
 
+#ifdef __CELLOS_LV2__
+#include "libretro.h"
+#endif
+
 //RETRO
 extern int alphasort2(const struct dirent **d1, const struct dirent **d2);
 /*

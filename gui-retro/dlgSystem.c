@@ -32,7 +32,11 @@ const char DlgSystem_fileid[] = "Hatari dlgSystem.c : " __DATE__ " " __TIME__;
 
 #include "custom.h"
 #include "inputdevice.h"
+
+#ifndef __CELLOS_LV2__
 #include "memory.h"
+#endif
+
 
 extern struct uae_prefs currprefs, changed_prefs;
 

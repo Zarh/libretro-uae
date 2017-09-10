@@ -13,6 +13,7 @@
 #include "memory.h"
 #include "xwin.h"
 #include "custom.h"
+#include "drawing.h"
 
 #include "hrtimer.h"
 

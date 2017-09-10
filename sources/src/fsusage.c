@@ -128,8 +128,10 @@ int get_fs_usage (const char *path, const char *disk, struct fs_usage *fsp)
 # include <unistd.h>
 #endif
 
+#ifndef __CELLOS_LV2__
 #if HAVE_SYS_PARAM_H
 # include <sys/param.h>
+#endif
 #endif
 
 #if HAVE_SYS_MOUNT_H

@@ -230,7 +230,7 @@ int sav_event=0;
 #define DEFAULT_PATH "/mnt/sdcard/euae/"
 #else
 #ifdef __CELLOS_LV2__
-#define DEFAULT_PATH "/dev_hdd0/HOMEBREW/UAE/"
+#define DEFAULT_PATH "/dev_hdd0/SSNE10000/USRDIR/cores/system/UAE/"
 #else
 #define DEFAULT_PATH "/"
 #endif

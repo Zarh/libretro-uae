@@ -26,11 +26,14 @@ const char DlgMemory_fileid[] = "Hatari dlgMemory.c : " __DATE__ " " __TIME__;
 #include "autoconf.h"
 #include "custom.h"
 #include "inputdevice.h"
-#include "memory.h"
 #include "savestate.h"
 #include "filesys.h"
 #include "zfile.h"
 #include "gensound.h"
+
+#ifndef __CELLOS_LV2__
+#include "memory.h"
+#endif
 
 #define DLGMEMC_512KB    3
 #define DLGMEMC_1MB      4

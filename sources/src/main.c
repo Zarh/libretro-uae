@@ -95,6 +95,10 @@ TCHAR optionsfile[256];
 static unsigned long randseed;
 static unsigned long oldhcounter;
 
+#ifdef __CELLOS_LV2__
+#include "libretro.h"
+#endif
+
 #ifndef WIN32PORT
 // Prototype in sysdeps.h
 DWORD GetLastError(void)

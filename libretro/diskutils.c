@@ -9,14 +9,14 @@
 #include <stdlib.h>
 #include <errno.h>
 
+#ifdef __CELLOS_LV2__
+#include "libretro.h"
+#endif
+
 int ndsknum=0;
 static int entries; 
 
 extern unsigned short int bmp[TEX_WIDTH * TEX_HEIGHT];
-
-#ifdef __CELLOS_LV2__
-#define S_ISDIR(x) (x & CELL_FS_S_IFDIR)
-#endif
 
 #define PATHSEP '/'
 

@@ -42,7 +42,11 @@ const char DlgVideo_fileid[] = "Hatari dlgVideo.c : " __DATE__ " " __TIME__;
 #include "autoconf.h"
 #include "custom.h"
 #include "inputdevice.h"
+
+#ifndef __CELLOS_LV2__
 #include "memory.h"
+#endif
+
 #include "savestate.h"
 #include "filesys.h"
 #include "zfile.h"
